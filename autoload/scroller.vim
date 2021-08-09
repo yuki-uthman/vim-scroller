@@ -19,7 +19,14 @@ function! s:scroll(up, distance, delay)
     let bottom = 1
   endif
 
+  let keypress = ''
   for count in range(1, a:distance, 1)
+
+    " break out of the loop if any key is pressed during the scroll
+    let keypress = getchar(1)
+    if keypress != ''
+      break
+    endif
 
     " this delay is necesarry to make it look smooth
     exec 'sleep! ' . a:delay . 'm'
@@ -46,4 +53,7 @@ function! s:scroll(up, distance, delay)
     " this forces it to update every time it moves
     redraw
   endfor
+
+  " re-execute the keypress
+  exec 'normal ' . keypress
 endf

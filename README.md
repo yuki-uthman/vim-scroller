@@ -54,6 +54,8 @@ Just use the same set of commands to remap to different keys:
   nmap <C-J> <Plug>(scroller-full-up)
   nmap <C-K> <Plug>(scroller-full-down)
 ```
+<br>
+<br>
 
 You can also customize the speed of the scroll for half-page and full-page 
 separately. The larger the number the slower the speed. These are the default 
@@ -62,6 +64,8 @@ values:
   let g:scroller_half_page_delay = 20
   let g:scroller_full_page_delay = 15
 ```
+<br>
+<br>
 
 If you want to scroll more pages you can make use of the autoload function.
 For example if you want to scroll 2 pages you can get the height of the window 

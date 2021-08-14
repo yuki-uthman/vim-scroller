@@ -5,6 +5,8 @@ The simplest smooth scroll plugin for neovim/vim.
 The only thing it does is to fix the cursor in the same position relative to the 
 window while scrolling.
 
+![](scroller.gif)
+
 For more extensive features check out:
   - [neoscroll](https://github.com/karb94/neoscroll.nvim)
   - [vim-smoothie](https://github.com/psliwka/vim-smoothie)

@@ -14,11 +14,11 @@ set cpo&vim
 let half_page_delay = get(g:, 'scroller_half_page_delay', 20)
 let full_page_delay = get(g:, 'scroller_full_page_delay', 15)
 
-noremap  <silent><Plug>(scroller-half-up)   :call scroller#up(&scroll, half_page_delay)<cr>
-noremap  <silent><Plug>(scroller-half-down) :call scroller#down(&scroll, half_page_delay)<cr>
+nnoremap  <silent><Plug>(scroller-half-up)   :call scroller#up(&scroll, half_page_delay)<cr>
+nnoremap  <silent><Plug>(scroller-half-down) :call scroller#down(&scroll, half_page_delay)<cr>
                                                                                                        
-noremap  <silent><Plug>(scroller-full-up)   :call scroller#up(&scroll * 2, full_page_delay)<cr>
-noremap  <silent><Plug>(scroller-full-down) :call scroller#down(&scroll * 2, full_page_delay)<cr>
+nnoremap  <silent><Plug>(scroller-full-up)   :call scroller#up(&scroll * 2, full_page_delay)<cr>
+nnoremap  <silent><Plug>(scroller-full-down) :call scroller#down(&scroll * 2, full_page_delay)<cr>
 
 if !exists("g:scroller_no_mappings") || ! g:scroller_no_mappings
   nmap <c-u> <Plug>(scroller-half-up)
